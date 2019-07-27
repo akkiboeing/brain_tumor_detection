@@ -8,7 +8,7 @@ filepath = "testdata"  # filepath for test data
 CATEGORIES = ["no","yes"] # categories of brain tumor
 IMG_SIZE = 70 # initialize image size for image resizing
 
-model = tf.keras.models.load_model("64x3-CNN-BrainTumor.model") # load the trained model for testing 
+model = tf.keras.models.load_model("BrainTumor-CNN.model") # load the trained model for testing 
 
 for img in os.listdir(filepath):
     img_array = cv2.imread(os.path.join(filepath,img), cv2.IMREAD_GRAYSCALE) # read image in grayscale(since color images take hella lot of size) and store it in an array
