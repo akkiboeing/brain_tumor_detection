@@ -58,4 +58,4 @@ for dense_layer in dense_layers:
             validation_split=0.3, 
             callbacks=[tensorboard])
 
-model.save('64x3-CNN-BrainTumor.model')  #saving the trained model
+model.save('BrainTumor-CNN.model')  #saving the trained model
