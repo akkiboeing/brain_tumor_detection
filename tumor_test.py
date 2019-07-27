@@ -10,7 +10,7 @@ IMG_SIZE = 70 # initialize image size for image resizing
 
 model = tf.keras.models.load_model("BrainTumor-CNN.model") # load the trained model for testing 
 
-for img in os.listdir(filepath):
+for img in os.listdir(filepath):    # iteratively test the model using the images present in testdata folder
     img_array = cv2.imread(os.path.join(filepath,img), cv2.IMREAD_GRAYSCALE) # read image in grayscale(since color images take hella lot of size) and store it in an array
     new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE)) # resize all the images in image_array by IMG_SIZExIMG_SIZE dimension and store it in an array
     newarray = new_array.reshape(-1, IMG_SIZE, IMG_SIZE, 1) # store the rshaped image array in a new array
