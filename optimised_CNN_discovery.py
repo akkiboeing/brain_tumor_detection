@@ -40,7 +40,7 @@ for dense_layer in dense_layers:
 
             model.add(Flatten())
 
-            for _ in range(dense_layer):
+            for any in range(dense_layer):
                 model.add(Dense(layer_size))
                 model.add(Activation('relu'))
 
