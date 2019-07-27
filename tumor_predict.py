@@ -14,7 +14,7 @@ def prepare(filepath):
     new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE)) # resize all the images in image_array by IMG_SIZExIMG_SIZE dimension and store it in an array
     return new_array.reshape(-1, IMG_SIZE, IMG_SIZE, 1) # return the reshaped image array when function is called
 
-model = tf.keras.models.load_model("64x3-CNN-BrainTumor.model") # load the trained model for predicting 
+model = tf.keras.models.load_model("BrainTumor-CNN.model") # load the trained model for predicting 
 
 prediction = model.predict([prepare(filepath)]) # predicting using the loaded model
 img = mpimg.imread(filepath) # read image path for image display using matplotlib
