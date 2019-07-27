@@ -41,7 +41,6 @@ for features,labels in training_data:
 X = np.array(X).reshape(-1, IMG_SIZE, IMG_SIZE, 1)    # reshaping values on X based on Image Size, gray scale and features
 
 # to save the arrayed dataset and category for each so we can directly load it during training instead of running this everytime
-
 pickle_out = open("X.pickle","wb")                    
 pickle.dump(X, pickle_out)
 pickle_out.close()        
