@@ -58,4 +58,4 @@ for dense_layer in dense_layers:
             callbacks=[tensorboard])
 
 # use tensorboard to find the optimised model by checking validation loss and validation accuracy
-#tensorboard usage: tensorboard --logdir=logs\
+# tensorboard usage: tensorboard --logdir=logs\
